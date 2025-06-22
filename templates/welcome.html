@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page de jan</title>
+</head>
+<body>
+    <h1>Bienvenue sur ma page</h1>
+    <form method="POST" action="/submit">
+        <label for="nb_side">Nombre de côté</label>
+        <input type="text" id="nb_side" name="nb_side">
+        <br>
+
+        <label for="nb_repet">Nombre de répétition</label>
+        <input type="text" id="nb_repet" name="nb_repet">
+        <br>
+
+        <label for="init_size">Taille initial du motif</label>
+        <input type="text" id="init_size" name="init_size">
+        <br>
+
+        <label for="rotation_angle">Angle de rotation entre chaque répétition du motif</label>
+        <input type="text" id="rotation_angle" name="rotation_angle">
+        <br>
+
+        <label for="color">Couleur du motif</label>
+        <input type="text" id="color" name="color">
+        <br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+    <!--
+    {% if result %}
+    <p>Forme reconnue : {{ result }}</p>
+    {% endif %}-->
+
+    {% if image_url %}
+    <img src="{{ image_url }}" alt="Dessin généré">
+    {% endif %}
+
+</body>
+</html>
